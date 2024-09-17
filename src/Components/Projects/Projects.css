@@ -1,0 +1,65 @@
+.projects {
+  margin: 80px auto;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Flexible grid with min width */
+  gap: 20px; /* Add space between items */
+  justify-content: center; /* Center the entire grid content */
+}
+
+.project {
+  width: 100%;
+  max-width: 300px; /* Set a max-width to control image size */
+  position: relative;
+  margin: 0 auto; /* Center the item within its grid column */
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  border-radius: 8%;
+  display: block;
+}
+
+.caption {
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(20, 22, 22, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: rgb(214, 214, 214);
+  cursor: pointer;
+  opacity: 0;
+  padding-top: 20%;
+  transition: 0.4s;
+}
+
+.caption img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.project:hover .caption {
+  opacity: 1;
+  padding-top: 0;
+  background: #000000de;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 800px) {
+  .projects {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(200px, 1fr)
+    ); /* Flexible grid with smaller min width */
+  }
+}

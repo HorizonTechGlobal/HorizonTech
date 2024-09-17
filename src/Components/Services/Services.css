@@ -1,0 +1,58 @@
+.services {
+  margin: 80px auto;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Create 3 columns */
+  gap: 20px; /* Add space between items */
+}
+.service img {
+  width: 100%;
+  border-radius: 8%;
+  display: block;
+}
+.service {
+  flex-basis: 31%;
+  position: relative;
+}
+.caption {
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(20, 22, 22, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: rgb(214, 214, 214);
+  cursor: pointer;
+  opacity: 0;
+  padding-top: 20%;
+  transition: 0.4s;
+}
+.caption img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+.service:hover .caption {
+  opacity: 1;
+  padding-top: 0;
+  background: #121313ce;
+}
+
+/* Media Query */
+@media (max-width: 650px) {
+  .services {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Adjust to 1 column for smaller screens */
+    gap: 20px;
+  }
+  .service {
+    flex-basis: 100%;
+    margin: 20px;
+  }
+}
