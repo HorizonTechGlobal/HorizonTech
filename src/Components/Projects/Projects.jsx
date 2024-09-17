@@ -29,13 +29,13 @@ const Projects = () => {
           </div>
         </div>
       </a>
-      {/* <div className="project">
+      <div className="project">
         <img src={comingsoon} alt="project3" />
         <div className="caption">
           <img src={comingsoon_icon} alt="projectIcon3" />
           <p>Coming Soon</p>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };
